@@ -1,6 +1,6 @@
 {
   "name": "fsmapkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "📁 CLI to visualize and export the file structure of any folder or GitHub repo",
   "author": "Swasthik K <swasthk.work@gmail.com>",
   "license": "MIT",
