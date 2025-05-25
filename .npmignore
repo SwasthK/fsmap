@@ -1,0 +1,10 @@
+/src
+/node_modules
+
+.env
+
+tsconfig.json
+tsup.config.ts
+fsmap.config.json
+fsmap.schema.config.json
+vite.config.ts

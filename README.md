@@ -20,18 +20,29 @@ Supports output as text, markdown, JSON, and even integrates file size, modified
 
 ---
 
-## 🛠️ Installation
+## 🛠️ Installation 
+(Global)
 
 ```bash
 npm install -g fsmap
 ```
 
+(Local)
+```bash
+npm install -D fsmap
+```
+
 ---
 
 ## 🚀 Usage
-
+(Global)
 ```bash
 fsmap [path] [options]
+```
+
+(Local)
+```bash
+npx fsmap [path] [options]
 ```
 
 By default, it scans the **current directory (`.`)**.
@@ -106,21 +117,41 @@ fsmap
 
 ---
 
+## ⚙️ Config
+
+Add a `fsmap.config.json` file in your project root to override the default options.
+
+Example:
+
+```js
+{
+    "$schema": "https://raw.githubusercontent.com/SwasthK/fsmap/main/fsmap.schema.config.json",
+    "exclude": [
+        "node_modules",
+        ".git",
+        "dist"
+    ]
+}
+```
+> **_NOTE:** Cli written options override the config rules.
+
+---
+
 ## 🛠 Plugin Support
 
-Add a `fsmap.config.js` file in your project root to transform or extend the file tree output.
+Add a `fsmap.config.ts` file in your project root to transform or extend the file tree output.
 
 Example:
 
 ```js
 module.exports = {
-  transform(entry) {
-    if (entry.type === "file" && entry.name.endsWith(".test.js")) {
-      entry.meta = { test: true };
-    }
-    return entry;
-  }
-};
+    transform(entry: FsMapEntry) {
+        if (entry.name.endsWith("git.ts")) {
+            entry.name = "🧪 " + entry.name;
+        }
+        return entry;
+    }
+}
 ```
 
 ---
@@ -139,4 +170,4 @@ Found a bug? Have a feature idea? PRs are welcome — open an issue first!
 
 ## ✨ Author
 
-Made with ❤️ by [Swasthik](https://github.com/SwasthK)
+Made with ❤️ by [Swasthik](https://swasthk.vercel.app)

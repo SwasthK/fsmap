@@ -5,10 +5,11 @@
   "author": "Swasthik K <swasthk.work@gmail.com>",
   "license": "MIT",
   "bin": {
-    "fsmap": "./dist/src/index.js"
+    "fsmap": "./dist/index.js"
   },
-  "main": "./dist/src/index.js",
-  "type": "commonjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "keywords": [
     "cli",
     "folder-structure",
@@ -31,7 +32,8 @@
   "homepage": "https://github.com/SwasthK/fsmap#readme",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "build": "tsc",
+    "build": "tsup",
+    "build:watch": "tsup --watch",
     "test": "vitest",
     "knip": "knip"
   },
@@ -44,13 +46,14 @@
     "@types/cli-spinner": "^0.2.3",
     "@types/commander": "^2.12.0",
     "@types/node": "^22.15.21",
-    "knip": "^5.58.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3",
-    "vitest": "^3.1.4"
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
   },
   "files": [
     "dist",
+    "fsmap.config.json",
+    "fsmap.schema.config.json",
     "README.md",
     "LICENSE"
   ]

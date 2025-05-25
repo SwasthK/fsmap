@@ -1,9 +1,8 @@
 {
-    "$schema": "https://github.com/SwasthK/fsmap/blob/main/fsmap.config.json",
+    "$schema": "https://raw.githubusercontent.com/SwasthK/fsmap/main/fsmap.schema.config.json",
     "exclude": [
         "node_modules",
         ".git",
         "dist"
     ]
-    
 }
