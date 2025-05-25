@@ -24,12 +24,12 @@ Supports output as text, markdown, JSON, and even integrates file size, modified
 (Global)
 
 ```bash
-npm install -g fsmap
+npm install -g fsmapkit
 ```
 
 (Local)
 ```bash
-npm install -D fsmap
+npm install -D fsmapkit
 ```
 
 ---
