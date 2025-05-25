@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "fsmap Configuration",
+  "type": "object",
+  "properties": {
+    "depth": { "type": "number", "minimum": 0 },
+    "exclude": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "showSize": { "type": "boolean" },
+    "showDate": { "type": "boolean" },
+    "showHidden": { "type": "boolean" },
+    "outputFormat": {
+      "type": "string",
+      "enum": ["text", "json", "markdown"]
+    },
+    "outputFile": { "type": "string" }
+  },
+  "additionalProperties": false
+}

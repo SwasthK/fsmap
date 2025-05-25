@@ -1,0 +1,57 @@
+{
+  "name": "fsmap-cli",
+  "version": "1.0.0",
+  "description": "📁 CLI to visualize and export the file structure of any folder or GitHub repo",
+  "author": "Swasthik K <swasthk.work@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "fsmap": "./dist/src/index.js"
+  },
+  "main": "./dist/src/index.js",
+  "type": "commonjs",
+  "keywords": [
+    "cli",
+    "folder-structure",
+    "directory-tree",
+    "filesystem",
+    "fsmap",
+    "markdown",
+    "json",
+    "visualize",
+    "tree",
+    "github"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SwasthK/fsmap"
+  },
+  "bugs": {
+    "url": "https://github.com/SwasthK/fsmap/issues"
+  },
+  "homepage": "https://github.com/SwasthK/fsmap#readme",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "test": "vitest",
+    "knip": "knip"
+  },
+  "dependencies": {
+    "cli-spinner": "^0.2.10",
+    "commander": "^14.0.0",
+    "simple-git": "^3.27.0"
+  },
+  "devDependencies": {
+    "@types/cli-spinner": "^0.2.3",
+    "@types/commander": "^2.12.0",
+    "@types/node": "^22.15.21",
+    "knip": "^5.58.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}
