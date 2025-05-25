@@ -1,5 +1,5 @@
 {
-  "name": "fsmap-cli",
+  "name": "fsmapkit",
   "version": "1.0.0",
   "description": "📁 CLI to visualize and export the file structure of any folder or GitHub repo",
   "author": "Swasthik K <swasthk.work@gmail.com>",
@@ -52,8 +52,6 @@
   },
   "files": [
     "dist",
-    "fsmap.config.json",
-    "fsmap.schema.config.json",
     "README.md",
     "LICENSE"
   ]
